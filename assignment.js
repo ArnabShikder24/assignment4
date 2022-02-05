@@ -1,14 +1,20 @@
 // Problem 1
 function anaToVori(ana) {
+    // input validation checking
+    if (ana < 0 || typeof ana == 'string' || typeof ana == 'boolean') {
+        return 'Please Sir/Mam, Give me a valid input.';
+    }
+
+    // main calculation
     const vori = ana / 16;
     return vori;
 }
-let result1 = anaToVori(32);
+let result1 = anaToVori(64);
 // console.log(result1);
 
 // Problem 2
 function pandaCost(singara, samosa, jilapi) {
-
+     // input validation checking
     if (singara < 0 || samosa < 0 || jilapi < 0) {
         return 'Please Sir/Mam, Give me a valid quantity. It is a Nagative number';
     }
@@ -19,6 +25,7 @@ function pandaCost(singara, samosa, jilapi) {
         return 'Please Sir/Mam, Give me a valid quantity. It is a boolean';
     }
 
+    // main calculation
     let perSingara = 7;
     let perSamosa = 10;
     let perJilapi = 15;
@@ -36,11 +43,12 @@ let result2 = pandaCost(1, 1, 1);
 
 // Problem 3
 function picnicBudget(person) {
+    // input validation checking
     if (person < 0 || typeof person == 'string' || typeof person == 'boolean') {
         return 'Please Sir/Mam, Give me a valid information about person.';
     }
     
-
+    // main calculation
     if (person <= 100) {
         let firstGroupCost = person * 5000;
         return firstGroupCost;
@@ -62,11 +70,12 @@ function picnicBudget(person) {
     }
 }
 
-let result3 = picnicBudget(50);
+let result3 = picnicBudget(250);
 // console.log(result3);
 
 // problem 4
 function oddFriend(friends) {
+    // main calculation
     let oddBro = '';
     for (const friend of friends) {
         if (friend.length % 2 == 1) {
