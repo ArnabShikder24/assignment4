@@ -78,14 +78,19 @@ function oddFriend(friends) {
     // main calculation
     let oddBro = '';
     for (const friend of friends) {
-        if (friend.length % 2 == 1) {
-            oddBro = friend;
-            break;
+        if(typeof friend == 'string') {
+            if (friend.length % 2 == 1) {
+                oddBro = friend;
+                break;
+            }
+        }
+        else {
+            return 'give a valid name';
         }
     }
     return oddBro;
 }
 
-let array = ['amlu', 'dumulu', 'ramulu', 'kamulu', 'tamlu', 'pamlulla', 'borolu'];
-let result4 = oddFriend(array);
-// console.log(result4)
+let friendList = ['amlu', 'dumulu', 'ramulu', 'kamulu', 'tamlu', 'pamlulla', 'borolu'];
+let result4 = oddFriend(friendList);
+// console.log(result4);
